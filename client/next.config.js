@@ -1,5 +1,6 @@
 const config = {
-
+	serverRuntimeConfig: {},
+	publicRuntimeConfig: {}
 };
 
 module.exports = Object.assign(
