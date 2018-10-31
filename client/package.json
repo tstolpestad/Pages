@@ -11,7 +11,9 @@
     },
     "dependencies": {
         "@zeit/next-css": "^1.0.1",
+        "cssnano": "^4.1.7",
         "next": "^7.0.2",
+        "postcss-preset-env": "^6.3.0",
         "react": "^16.7.0-alpha.0",
         "react-dom": "^16.7.0-alpha.0"
     },
