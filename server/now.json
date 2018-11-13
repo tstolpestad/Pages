@@ -1,6 +1,12 @@
 {
-	"type": "docker",
-	"features": {
-		"cloud": "v2"
+	"version": 2,
+	"builds": [
+		{"src": "handlers/**/*.js", "use": "@now/node"}
+	],
+	"routes": [
+		{"src": "/(.*)", "dest": "/handlers/$1"}
+	],
+	"build": {
+		"env": {"NPM_TOKEN": "@npm_token"}
 	}
 }

@@ -1,29 +1,21 @@
-import {lilypads} from '@amphibian/server-lilypads';
-import {NAME, DESCRIPTION, AUTHOR, VERSION} from '../env';
-import server from '../server';
+import lilypads from 'lilypads';
+import {NAME, AUTHOR, ENVIRONMENT, VERSION, DESCRIPTION} from '../env';
+import handler from '../utilities/handler';
+import {specification as helloSpecification} from './v1/hello';
 
-import {specification as helloGet} from './v1/hello';
+export default handler(() => (
+	lilypads({id: 'handlers/index'}, () => (
+		JSON.stringify({
+			success: true,
+			name: NAME,
+			author: AUTHOR,
+			environment: ENVIRONMENT,
+			version: VERSION,
+			description: DESCRIPTION,
 
-const id = 'handlers/index';
-
-async function index(context) {
-	await lilypads(context, {id}, () => ({
-		success: true,
-		name: NAME,
-		description: DESCRIPTION,
-		version: VERSION,
-		author: AUTHOR,
-
-		operations: {
-			v1: {
-				hello: helloGet
+			operations: {
+				hello: helloSpecification
 			}
-		}
-	}));
-
-	context.set('cache-control', 'public, max-age=60');
-}
-
-server.registerRouteHandler(index, {method: 'get', path: '/'});
-
-export default index;
+		})
+	))
+));
