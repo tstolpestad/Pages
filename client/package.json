@@ -3,26 +3,29 @@
     "version": "1.0.0",
     "license": "UNLICENSED",
     "scripts": {
-        "dev": "NODE_ENV=development next dev",
+        "dev": "NODE_ENV=development next",
         "build": "next build",
         "start": "NODE_ENV=production next start",
         "test": "jest --coverage --bail",
-        "lint": "xo"
+        "lint": "xo",
+        "deploy": "now",
+        "alias": "now alias"
     },
     "dependencies": {
-        "@zeit/next-css": "^1.0.1",
-        "cssnano": "^4.1.7",
         "next": "^7.0.2",
-        "postcss-preset-env": "^6.3.0",
-        "react": "^16.7.0-alpha.0",
-        "react-dom": "^16.7.0-alpha.0"
+        "next-server": "^0.0.1",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3"
     },
     "devDependencies": {
+        "@zeit/next-css": "^1.0.1",
         "babel-eslint": "^10.0.1",
-        "eslint-config-amphibian": "^1.0.0",
+        "cssnano": "^4.1.7",
+        "eslint-config-amphibian": "^1.1.1",
         "eslint-config-xo-react": "^0.17.0",
         "eslint-plugin-react": "^7.11.1",
         "jest": "^23.6.0",
+        "postcss-preset-env": "^6.3.0",
         "xo": "^0.23.0"
     },
     "xo": {
