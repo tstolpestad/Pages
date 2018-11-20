@@ -4958,10 +4958,6 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
 
-next-server@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-0.0.1.tgz#50532925ba928b8e2486976ce908ace74001239f"
-
 next@^7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/next/-/next-7.0.2.tgz#5ff6b3f0e6cf03ce539d5779a55dc1f8fb1759d7"
