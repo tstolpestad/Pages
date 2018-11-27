@@ -13,7 +13,14 @@
         "lilypads": "^1.0.1"
     },
     "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-env": "^2.4.1",
         "babel-eslint": "^10.0.1",
+        "babel-jest": "^23.6.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-decorators": "^6.24.1",
+        "babel-plugin-transform-react-constant-elements": "^6.23.0",
+        "babel-plugin-transform-react-inline-elements": "^6.22.0",
         "eslint-config-amphibian": "^1.1.2",
         "esm": "^3.0.84",
         "jest": "^23.6.0",
