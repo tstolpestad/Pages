@@ -1,4 +1,3 @@
-import fs from 'fs';
 import http from 'http';
 
 const HANDLERS_FOLDER = './handlers';
