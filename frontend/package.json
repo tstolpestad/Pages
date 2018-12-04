@@ -8,6 +8,7 @@
         "start": "NODE_ENV=production next start",
         "test": "jest --coverage --bail",
         "lint": "xo",
+        "fix": "xo --fix",
         "deploy": "now",
         "alias": "now alias"
     },
