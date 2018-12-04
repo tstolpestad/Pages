@@ -1,12 +1,14 @@
 import handleResponse from './handle-response';
 import handleError from './handle-error';
 
-export default function handler(responder) {
+export default function handler(responder, options) {
 	return async (request, response) => {
+		const context = {request, response};
+
 		try {
-			handleResponse(response, await responder());
+			handleResponse(context, await responder(context), options);
 		} catch (error) {
-			handleError(response, error);
+			handleError(context, error, options);
 		}
 	};
 }

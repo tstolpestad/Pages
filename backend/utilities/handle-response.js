@@ -1,4 +1,4 @@
-export default function handleResponse(response, body, options = {}) {
+export default function handleResponse({response}, body, options = {}) {
 	response.statusCode = 200;
 
 	if (options.setCacheControlHeader !== false) {

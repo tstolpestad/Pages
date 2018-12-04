@@ -1,7 +1,6 @@
 import lilypads from 'lilypads';
 import handler from '../../utilities/handler';
 
-const options = {id: 'handlers/v1/hello'};
 const specification = {
 	description: 'Get hello.',
 	examples: ['GET /v1/hello'],
@@ -12,11 +11,14 @@ const specification = {
 };
 
 export {specification};
-export default handler(() => (
-	lilypads(options, () => (
+export default handler(({request}) => {
+	const {url} = request;
+	const options = {id: `handlers/v1/hello/${url}`};
+
+	return lilypads(options, () => (
 		JSON.stringify({
 			success: true,
-			message: 'hello'
+			message: `hello from ${url}`
 		})
 	))
-));
+});
