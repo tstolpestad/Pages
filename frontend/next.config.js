@@ -1,6 +1,7 @@
 let PHASE_PRODUCTION_SERVER;
 
 try {
+	/* eslint-disable-next-line import/no-unresolved */
 	({PHASE_PRODUCTION_SERVER} = require('next-server/constants'));
 } catch (error) {
 	({PHASE_PRODUCTION_SERVER} = require('next/constants'));

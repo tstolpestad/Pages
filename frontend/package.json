@@ -7,8 +7,8 @@
         "build": "next build",
         "start": "NODE_ENV=production next start",
         "test": "jest --coverage --bail",
-        "lint": "xo",
-        "fix": "xo --fix",
+        "lint": "stylelint './**/*.css' & xo",
+        "fix": "xo --fix & stylelint './**/*.css' --fix",
         "deploy": "now",
         "alias": "now alias"
     },
@@ -26,6 +26,8 @@
         "eslint-plugin-react": "^7.11.1",
         "jest": "^23.6.0",
         "postcss-preset-env": "^6.3.0",
+        "stylelint": "^9.9.0",
+        "stylelint-config-amphibian": "^1.0.0",
         "xo": "^0.23.0"
     },
     "xo": {
@@ -42,6 +44,14 @@
                     "expect"
                 ]
             }
+        ]
+    },
+    "stylelint": {
+        "extends": [
+            "stylelint-config-amphibian"
+        ],
+        "ignoreFiles": [
+            "./coverage/**/*"
         ]
     }
 }
