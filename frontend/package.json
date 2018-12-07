@@ -51,7 +51,9 @@
             "stylelint-config-amphibian"
         ],
         "ignoreFiles": [
-            "./coverage/**/*"
+            "./coverage/**/*",
+            "./.next/**/*",
+            "./node_modules/**/*"
         ]
     }
 }
