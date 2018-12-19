@@ -9,15 +9,15 @@ import React from 'react';
 
 
 describe("PageElement", ()=> {
-	const wrapper = shallow(<PageElement element="test"/>);
+	const testText = "test"
+	const wrapper = shallow(<PageElement element={testText}/>);
 	it("should match snapshot, for regression testing", ()=>{
 		expect(toJson(wrapper)).toMatchSnapshot();
 	})
 	it("should render an element with text", ()=>{
-		console.log(toJson(wrapper))
-		expect(toJson(wrapper)).toBe(true);
+		expect(wrapper.text()).toEqual(testText);
 	})
 	it("should be a droppable element", ()=> {
-
+		extect(false).toBe(true) //Todo:implement test
 	})
 })
