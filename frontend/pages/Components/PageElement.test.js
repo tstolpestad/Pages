@@ -17,7 +17,7 @@ describe("PageElement", ()=> {
 	it("should render an element with text", ()=>{
 		expect(wrapper.text()).toEqual(testText);
 	})
-	it("should be a droppable element", ()=> {
-		extect(false).toBe(true) //Todo:implement test
+	it("should be a draggable element", ()=> {
+		expect(false).toBe(true) //Todo:implement test
 	})
 })
