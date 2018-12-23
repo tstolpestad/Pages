@@ -18,8 +18,8 @@
         "enzyme": "^3.8.0",
         "enzyme-to-json": "^3.3.5",
         "next": "^7.0.2",
-        "react": "^16.6.3",
-        "react-dom": "^16.6.3"
+        "react": "16.7.0-alpha.0",
+        "react-dom": "16.7.0-alpha.0"
     },
     "devDependencies": {
         "@zeit/next-css": "^1.0.1",
@@ -36,7 +36,7 @@
         "identity-obj-proxy": "^3.0.0",
         "jest": "^23.6.0",
         "postcss-preset-env": "^6.3.0",
-        "react-test-renderer": "^16.6.3",
+        "react-test-renderer": "16.7.0-alpha.0",
         "stylelint": "^9.9.0",
         "stylelint-config-amphibian": "^1.0.3",
         "xo": "^0.23.0"

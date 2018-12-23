@@ -1,21 +1,25 @@
 import {PageList} from './PageList'
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
 import React from 'react';
+import TestRenderer from 'react-test-renderer';
+
+//this test has to use react's test renderer as enzyme does not have support for hooks yet
+//Todo: consider changing to react-test-renderer for the entire app
+
 
 describe("PageList", ()=> {
 	const pages = ["test", "test/page"];
-	const wrapper = shallow(<PageList pages={pages} />);
-	const wrapperWithTitle = shallow(<PageList pages={pages} title="PageListTest"/>);
+	const wrapper = TestRenderer.create(<PageList pages={pages} />);
+	const wrapperWithTitle = TestRenderer.create(<PageList pages={pages} title="PageListTest"/>);
 	it("should match snapshot for regression testing", ()=>{
-		expect(toJson(wrapper)).toMatchSnapshot();
+		expect(wrapper.toJSON).toMatchSnapshot();
+		expect(wrapperWithTitle.toJSON).toMatchSnapshot();
 	});
 	it("should render a list of page elements ", ()=> {
-		expect(toJson(wrapper.find("PageElement")).length).toEqual(2);
+		expect(wrapper.root.findByType("PageElement").length).toEqual(2);
 	});
 	it("should have an optional title", ()=>{
-		expect(wrapper.find('.title')).toHaveLength(0);
-		expect(wrapperWithTitle.find('.title')).toHaveLength(1);
+		expect(wrapper.root.findAllByProps({className: "title"})).toHaveLength(0);
+		expect(wrapperWithTitle.root.findAllByProps({className: "title"})).toHaveLength(1);
 	});
 	it("should be a droppable", ()=> {
 		expect(false).toBe(true) //Todo:implement test
