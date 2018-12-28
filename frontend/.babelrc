@@ -1,12 +1,14 @@
 {
   "env": {
 	"test": {
-	  "presets": ["env", "react", "stage-2"],
-	  "plugins": ["transform-export-extensions"],
+	  "presets": ["@babel/env", "@babel/react"],
+	  "plugins": ["@babel/transform-export-extensions"],
 	  "only": [
 		"./**/*.js",
 		"node_modules/jest-runtime"
 	  ]
 	}
-  }
+  },
+  "presets": [ "@babel/react"],
+  "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }

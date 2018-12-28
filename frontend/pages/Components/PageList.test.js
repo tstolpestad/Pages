@@ -15,6 +15,7 @@ describe("PageList", ()=> {
 		expect(wrapperWithTitle.toJSON).toMatchSnapshot();
 	});
 	it("should render a list of page elements ", ()=> {
+		console.log(wrapper.toJSON)
 		expect(wrapper.root.findByType("PageElement").length).toEqual(2);
 	});
 	it("should have an optional title", ()=>{

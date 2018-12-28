@@ -14,19 +14,22 @@
         "alias": "now alias"
     },
     "dependencies": {
-        "babel-jest": "^23.6.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "enzyme": "^3.8.0",
         "enzyme-to-json": "^3.3.5",
         "next": "^7.0.2",
         "react": "16.7.0-alpha.0",
-        "react-dom": "16.7.0-alpha.0"
+        "react-beautiful-dnd": "^10.0.3",
+        "react-dom": "16.7.0-alpha.0",
+        "regenerator-runtime": "^0.13.1"
     },
     "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-export-default-from": "^7.2.0",
+        "@babel/preset-env": "^7.2.3",
+        "@babel/preset-react": "^7.0.0",
         "@zeit/next-css": "^1.0.1",
         "babel-eslint": "^10.0.1",
-        "babel-plugin-transform-export-extensions": "^6.22.0",
-        "babel-preset-env": "^1.7.0",
-        "babel-preset-react": "^6.24.1",
         "babel-preset-stage-2": "^6.24.1",
         "cssnano": "^4.1.7",
         "enzyme-adapter-react-16": "^1.7.1",
