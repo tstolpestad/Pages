@@ -43,18 +43,42 @@ export default () => {
 	};
 
 	const [data, setData] = useState(initalData);
+	const [searchInput, setSearchInput] = useState(null);
 
 	const onDragEnd = result => {
-		//Todo: implement onDragEnd
-	}
+		if (result.destination) {
+			let sourcePages = data.lists[result.source.droppableId].pages;
+			let destPages = data.lists[result.destination.droppableId].pages;
+			const item = sourcePages.splice(result.source.index,1);
+			destPages.splice(result.destination.index, 0, item);
+			const newState = {
+				...data,
+				lists: {
+					...data.lists,
+					[result.source.droppableId]: {
+						...data.lists[result.source.droppableId],
+						pages: sourcePages
+					},
+					[result.destination.droppableId]: {
+						...data.lists[result.destination.droppableId],
+						pages: destPages
+					}
+				}
+			};
+			setData(newState)
+		}
+	};
 
 	return (
 		<div className={classNames.container}>
-			<div id="search"></div>
+			<div id="search">
+				<button type="button" onClick={(e)=> console.log(e.target.value)}>+</button>
+				<input type="text" name="search" onChange={(e)=> setSearchInput(e.target.value)} />
+			</div>
 			<DragDropContext id="lists" onDragEnd={onDragEnd}>
 				{data.listOrder.map(listID => {
 					const list = {...data.lists[listID], pages : data.lists[listID].pages.map((pageid) => data.allPages[pageid])};
-					return <PageList key={listID} {...list} />
+					return <PageList key={listID} {...list} search={searchInput}/>
 				})}
 			</DragDropContext>
 		</div>

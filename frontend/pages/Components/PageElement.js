@@ -4,7 +4,6 @@ import classNames from './PageElement.css';
 
 
 export const PageElement = ({element, index, dnd, }) => {
-	//todo: make droppable
 	//todo: styling
 	return dnd ?
 		<Draggable draggableId={element.id} index={index}>
