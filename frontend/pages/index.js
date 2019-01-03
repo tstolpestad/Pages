@@ -71,9 +71,9 @@ export default () => {
 
 	return (
 		<div className={classNames.container}>
-			<div id="search">
-				<button type="button" onClick={(e)=> console.log(e.target.value)}>+</button>
-				<input type="text" name="search" onChange={(e)=> setSearchInput(e.target.value)} />
+			<div id="search" className={classNames.searchBar}>
+				<button className={classNames.newButton} type="button" onClick={(e)=> console.log(e.target.value)}>+ Ny</button>
+				<input type="text" name="search" className={classNames.search} onChange={(e)=> setSearchInput(e.target.value)} />
 			</div>
 			<DragDropContext id="lists" onDragEnd={onDragEnd}>
 				{data.listOrder.map(listID => {

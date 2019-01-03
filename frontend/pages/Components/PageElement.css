@@ -1,5 +1,6 @@
 .element {
 	background: white;
 	padding: 10px;
-	width: 100%;
+	margin: 5px;
+	box-shadow: 0 2px #b5b6b7;
 }

@@ -9,6 +9,7 @@ export default class CustomDocument extends Document {
 					<meta charSet="utf-8"/>
 					<meta name="viewport" content="initial-scale=1"/>
 					<link rel="icon" href="/static/favicon.png"/>
+					<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 				</Head>
 
 				<body>

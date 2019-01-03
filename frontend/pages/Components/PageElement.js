@@ -9,14 +9,14 @@ export const PageElement = ({element, index, dnd, }) => {
 		<Draggable draggableId={element.id} index={index}>
 			{
 				provided => (
-					<div className={classNames.element} {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+					<div className={classNames.element } {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
 						{element.title}
 					</div>
 				)
 
 			}
 		</Draggable>
-		:<div className={classNames.element}>
+		:<div className={classNames.element }>
 		{element.title}
 	</div>
 }
