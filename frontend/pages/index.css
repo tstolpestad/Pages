@@ -20,19 +20,4 @@
 	}
 
 }
-	.search {
-		height: 34px;
-		border: solid 1px grey;
-		border-radius: 12px;
-		padding: 5px;
-		margin-left: 10px;
-		width: 380px;
-	}
-	.newButton{
-		height: 44px;
-		width: 80px;
-		background-color: orange;
-		border: solid 1px darkorange;
-		border-radius: 12px;
-		font-size: 24px;
-	}
+
