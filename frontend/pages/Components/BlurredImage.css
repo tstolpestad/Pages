@@ -1,0 +1,19 @@
+.blurredimage{
+	width: 200px;
+	height: 180px;
+	transition: filter 1s ease;
+	background-position: 50% 50%;
+	background-origin: border-box;
+	background-size: cover;
+
+}
+.unloaded{
+	filter: blur(3px);
+	background: url('/img/croppedPlaceholder.jpg');
+
+}
+.loaded{
+	filter: unset;
+	background: url('/img/croppedFull.jpg');
+
+}

@@ -1,4 +1,3 @@
-//todo: add styling
 import React, {useState} from "react";
 import {Droppable} from "react-beautiful-dnd"
 //css imports
