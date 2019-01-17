@@ -1,0 +1,10 @@
+.loaded {
+	opacity: 1;
+	transition: opacity 5s ease-in;
+	-moz-transition: opacity 5s ease-in;
+	-webkit-transition: opacity 5s ease-in;
+}
+
+.unloaded {
+	opacity: 0;
+}
