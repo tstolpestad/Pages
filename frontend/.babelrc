@@ -6,7 +6,6 @@
         "@babel/react"
       ],
       "plugins": [
-        "@babel/transform-export-extensions"
       ]
     }
   },

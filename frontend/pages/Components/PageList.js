@@ -25,8 +25,9 @@ export const PageList = ({id, pages, title, dnd, style, search})=> {
 			</Droppable>
 			: pageElements
 		;
+	const titleClasses = style?classNames.title + " "+classNames[style] : classNames.title;
 	return <div className={classNames.list}>
-		{title && <div className={classNames.title} onClick={()=> setOpen(!open)}>{title}<i className={"material-icons "+classNames.rightIcon}>
+		{title && <div className={titleClasses} onClick={()=> setOpen(!open)}>{title}<i className={"material-icons "+classNames.rightIcon}>
 			{open? "arrow_drop_up" : "arrow_drop_down"}
 		</i></div>}
 		<div className={title && classNames.indented}>

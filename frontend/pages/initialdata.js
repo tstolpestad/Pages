@@ -2,11 +2,11 @@ import { createResource, createCache } from "simple-cache-provider";
 
 const data = {
 	allPages: {
-		page1: {id: "page1", title: "/digital"},
-		page2: {id: "page2", title: "/digital/paske"},
-		page3: {id: "page3", title: "/digital/senior"},
-		page4: {id: "page4", title: "/total"},
-		page5: {id: "page5", title: "/total/sommer"}
+		page1: {id: "page1", title: "digital"},
+		page2: {id: "page2", title: "digital/paske"},
+		page3: {id: "page3", title: "digital/senior"},
+		page4: {id: "page4", title: "total"},
+		page5: {id: "page5", title: "total/sommer"}
 	},
 	lists: {
 		favorites: {
@@ -17,21 +17,20 @@ const data = {
 		list1 : {
 			id: "list1",
 			title: "Spesial",
-			style: "greenheader",
+			style: "greenbackground",
 			dnd: false,
 			pages: ["page3"]
 		},
 		list2: {
 			id: "list2",
 			title: "Sesong",
-			style: "blueheader",
+			style: "bluebackground",
 			dnd: false,
 			pages: ["page2", "page5"]
 		}
 	},
 	listOrder: ["favorites", "list1", "list2"]
 };
-const cache = createCache();
 export const initialdata = () => {
 	//a bit of an extreme wait but it is to show that the thing can load. also added some randomness just for fun
 	const ms = Math.floor(Math.random() * 10000);

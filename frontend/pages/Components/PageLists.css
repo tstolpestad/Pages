@@ -6,12 +6,13 @@
 	border: solid 1px grey;
 	border-radius: 30px;
 	padding: 5px;
-	margin-left: 10px;
-	width: 380px;
+	margin-left: 2%;
+	width: 65%;
 }
 .newButton{
 	height: 44px;
-	width: 80px;
+	width: 25%;
+	margin-left: 2%;
 	background-color: orange;
 	border: solid 1px darkorange;
 	border-radius: 12px;

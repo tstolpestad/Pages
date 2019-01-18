@@ -4,6 +4,11 @@ exports[`PageElement should match snapshot, for regression testing 1`] = `
 <div
   className="element"
 >
+  <span
+    className="icon"
+  >
+    /
+  </span>
   test
 </div>
 `;

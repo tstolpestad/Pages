@@ -10,6 +10,7 @@ export const PageElement = ({element, index, dnd, }) => {
 			{
 				provided => (
 					<div className={classNames.element } {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+						<span className={classNames.icon}>/</span>
 						{element.title}
 					</div>
 				)
@@ -17,6 +18,7 @@ export const PageElement = ({element, index, dnd, }) => {
 			}
 		</Draggable>
 		:<div className={classNames.element }>
+		<span className={classNames.icon}>/</span>
 		{element.title}
 	</div>
 }
